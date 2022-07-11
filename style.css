@@ -1,0 +1,421 @@
+/* --------------- UNIVERSAL CSS ----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header h2{
+    font-size: 2em;
+}
+.flex{
+    display: flex;
+}
+.card{
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+}
+.selected{
+    opacity: .2;
+}
+.fadeInEffect{
+    animation: fadeEffect .5s forwards;
+}
+@keyframes fadeEffect {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.clicked{
+    background-color: rgba(255, 255, 255, .9);
+}
+/* --------------------------------------------- */
+
+/* ---------------- HEADER CSS ---------------- */
+#headerNav{
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(29, 19, 19);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    color: white;
+}
+.normalNav ul{
+    min-width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+.normalNav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.normalNav ul li a:hover{
+    font-weight: bold;
+}
+:target{
+    scroll-margin-top: 3.6rem;
+}
+.dropBtn{
+    display: none;
+    padding: 3px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.dropDownNav{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(29, 19, 19);
+}
+.dropDownNav ul{
+    flex-direction: column;
+    list-style-type: none;
+}
+.dropDownNav ul li{
+    margin: 10px 0;
+}
+.dropDownNav ul li a{
+    text-decoration: none;
+    color: white;
+}
+/* -------------------------------------------- */
+
+/* --------------- JUMBOTRON CSS -------------- */
+#jumbotron{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/img/bgimg/jumbotron.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#jumbotron h1{
+    font-size: 5em;
+}
+#jumbotron h1 span{
+    background-color: rgb(29, 19, 19);
+    color: white;
+}
+#jumbotron p{
+    font-size: 1.5em;
+}
+/* -------------------------------------------- */
+
+/* ------------------ MENU CSS ---------------- */
+#menu{
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+#menu section{
+    width: 70%;
+    margin: 20px auto;
+}
+.bestMenu{
+    flex-direction: column;
+    gap: 20px;
+}
+.menuRow{
+    gap: 30px;
+}
+.foodItem{
+    flex-basis: 33.33%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+}
+.foodItem:hover{
+    transform: scale(102%);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
+}
+.foodItemImg{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.foodItemDesc{
+    padding: 10px;
+}
+.foodItemDesc h3{
+    font-size: 1.5em;
+}
+.price{
+    font-weight: bold;
+}
+.img1{
+    background-image: url(assets/img/food/nasigoreng.jpg);
+}
+.img2{
+    background-image: url(assets/img/food/mie.jpg);
+}
+.img3{
+    background-image: url(assets/img/food/sate.jpg);
+}
+.img4{
+    background-image: url(assets/img/food/soto.jpg);
+}
+.img5{
+    background-image: url(assets/img/food/bakso.jpg);
+}
+.img6{
+    background-image: url(assets/img/food/batagor.jpeg);
+}
+/* -------------------------------------------- */
+
+/* ----------------- PROMO CSS ---------------- */
+#promo{
+    padding: 0;
+    height: 400px;
+    flex-wrap: wrap;
+}
+#promo>:nth-child(1), #promo>:nth-child(4){
+    background-color: rgb(29, 19, 19);
+    color: white;
+}
+#promo>:nth-child(2), #promo>:nth-child(3){
+    background-color: #ff9f29;
+    color: black;
+}
+.promobox{
+    flex-basis: 50%;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.promobox h5{
+    text-align: center;
+    font-size: 8em;
+}
+/* -------------------------------------------- */
+
+/* ----------------- VENUE CSS ---------------- */
+#venue{
+    padding: 20px 0 0 0;
+    flex-direction: column;
+    text-align: center;
+}
+#venue section{
+    margin: 20px 0 0 0;
+    height: 500px;
+}
+.galleryPreview{
+    flex-basis: 50%;
+    background-image: url(assets/img/restaurant/restaurant1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.galleries{
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+.gallery{
+    flex-basis: 33.33%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+/* -------------------------------------------- */
+
+/* -------------- RESERVATION CSS ------------- */
+#reservation{
+    flex-direction: column;
+    padding: 20px;
+    background: lavender;
+    text-align: center;
+}
+#reservation section{
+    margin: 20px auto;
+    width: 40%;
+}
+form{
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+}
+form input, form textarea{
+    padding: 3px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+form .btn{
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    width: max-content;
+    background-color: rgb(24, 192, 24);
+    color: white;
+    cursor: pointer;
+}
+/* -------------------------------------------- */
+
+/* ----------------- ABOUT CSS ---------------- */
+#about{
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+#about figure{
+    margin: 20px;
+}
+#about img{
+    width: 200px;
+    border-radius: 100%;
+    border: 5px solid rgb(29, 19, 19);
+}
+.aboutDesc{
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px;
+    gap: 15px;
+}
+.aboutDesc>:nth-child(1){
+    flex-basis: 50%;
+    text-align: right;
+}
+.aboutDesc>:nth-child(2){
+    flex-basis: 50%;
+    text-align: left;
+}
+/* --------------------------------------------- */
+
+/* ----------------- FOOTER CSS ---------------- */
+footer{
+    background-color: rgb(29, 19, 19);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+footer ul{
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: center;
+    list-style-type: none;
+}
+footer ul li{
+    margin: 0 10px;
+}
+footer ul li a{
+    text-decoration: none;
+}
+/* -------------------------------------------- */
+
+/* -------------- RESPONSIVENESS -------------- */
+/* Max-Width 992px */
+@media (max-width: 992px){
+    #jumbotron{
+        height: 50vh;
+    }
+    #menu section{
+        width: 90%;
+        padding: 10px;
+    }
+    #venue section{
+        flex-direction: column;
+    }
+    #venue section{
+        height: 800px;
+    }
+    .galleryPreview{
+        flex-basis: 70%;
+    }
+    .galleries{
+        flex-basis: 30%;
+    }
+    #reservation section{
+        width: 70%;
+    }
+    form{
+        width: 100%;
+    }
+    .aboutDesc{
+        width: 70%;
+    }
+}
+
+/* Max-Width 576px */
+@media (max-width: 576px){
+    #headerNav{
+        padding: 10px;
+    }
+    .normalNav{
+        display: none;
+    }
+    .dropBtn{
+        display: block;
+    }
+
+    #jumbotron{
+        height: 100vh;
+        font-size: .8em;
+    }
+    #menu section{
+        width: 100%;
+        padding: 10px;
+    }
+    .menuRow{
+        flex-direction: column; 
+    }
+    #promo{
+        height: 600px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #promo>:nth-child(1), #promo>:nth-child(4){
+        background-color: rgb(29, 19, 19);
+        color: white;
+    }
+    #promo>:nth-child(2), #promo>:nth-child(3){
+        background-color: #ff9f29;
+        color: black;
+    }
+    .promobox h5{
+        font-size: 5em;
+    }
+    #venue section{
+        height: 500px;
+    }
+    .galleryPreview{
+        flex-basis: 60%;
+    }
+    .galleries{
+        flex-basis: 40%;
+    }
+    #reservation section{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    .aboutDesc{
+        width: 100%;
+        flex-direction: column;
+    }
+    .aboutDesc>:nth-child(1), .aboutDesc>:nth-child(2){
+        text-align: center;
+    }
+}
+/* -------------------------------------------- */
